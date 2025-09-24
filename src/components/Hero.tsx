@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroRobot from "@/assets/hero-robot.jpg";
+import video2025 from "@/assets/video_2025-09-24.mp4";
 
 const Hero = () => {
   return (
@@ -25,7 +26,58 @@ const Hero = () => {
               <Button size="lg" className="text-lg px-8 py-6 shadow-strong hover:shadow-medium transition-all">
                 Explore Our Technology
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                onClick={() => {
+                  const video = document.createElement('video');
+                  video.src = video2025;
+                  video.controls = true;
+                  video.autoplay = true;
+                  video.style.width = '100%';
+                  video.style.maxWidth = '800px';
+                  video.style.borderRadius = '1rem';
+                  
+                  const modal = document.createElement('div');
+                  modal.style.position = 'fixed';
+                  modal.style.top = '0';
+                  modal.style.left = '0';
+                  modal.style.width = '100%';
+                  modal.style.height = '100%';
+                  modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                  modal.style.display = 'flex';
+                  modal.style.alignItems = 'center';
+                  modal.style.justifyContent = 'center';
+                  modal.style.zIndex = '1000';
+                  modal.style.padding = '2rem';
+                  
+                  modal.appendChild(video);
+                  document.body.appendChild(modal);
+                  
+                  modal.onclick = (e) => {
+                    if (e.target === modal) {
+                      document.body.removeChild(modal);
+                    }
+                  };
+                  
+                  const closeBtn = document.createElement('button');
+                  closeBtn.innerHTML = '×';
+                  closeBtn.style.position = 'absolute';
+                  closeBtn.style.top = '1rem';
+                  closeBtn.style.right = '1rem';
+                  closeBtn.style.background = 'white';
+                  closeBtn.style.border = 'none';
+                  closeBtn.style.borderRadius = '50%';
+                  closeBtn.style.width = '3rem';
+                  closeBtn.style.height = '3rem';
+                  closeBtn.style.fontSize = '1.5rem';
+                  closeBtn.style.cursor = 'pointer';
+                  closeBtn.onclick = () => document.body.removeChild(modal);
+                  
+                  modal.appendChild(closeBtn);
+                }}
+              >
                 Watch Demo
               </Button>
             </div>

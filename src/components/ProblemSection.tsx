@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import dataVisualization from "@/assets/data-visualization.jpg";
+import video2025 from "@/assets/video_2025-09-24.mp4";
 
 const ProblemSection = () => {
   return (
@@ -49,11 +49,15 @@ const ProblemSection = () => {
 
           <div className="relative">
             <div className="absolute inset-0 bg-sky-gradient rounded-3xl blur-2xl opacity-20 scale-95"></div>
-            <img 
-              src={dataVisualization} 
-              alt="Motion capture data visualization showing robotic hand movements"
+            <video 
+              src={video2025}
+              autoPlay
+              loop
+              muted
               className="relative rounded-3xl shadow-strong w-full h-auto"
-            />
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
 

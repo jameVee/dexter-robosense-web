@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import aiBackground from "@/assets/ai-background.jpg";
+import videoSGProcessed from "@/assets/video_SG_processed.mp4";
 
 const SolutionSection = () => {
   return (
@@ -18,11 +18,15 @@ const SolutionSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div className="relative">
             <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-2xl scale-95"></div>
-            <img 
-              src={aiBackground} 
-              alt="AI and machine learning data streams visualization"
+            <video 
+              src={videoSGProcessed}
+              autoPlay
+              loop
+              muted
               className="relative rounded-3xl shadow-strong w-full h-auto"
-            />
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <div className="space-y-8">
