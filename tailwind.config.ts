@@ -57,6 +57,24 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        sky: {
+          light: "hsl(var(--sky-light))",
+          medium: "hsl(var(--sky-medium))",
+          dark: "hsl(var(--sky-dark))",
+        },
+      },
+      backgroundImage: {
+        'hero-gradient': 'var(--hero-gradient)',
+        'sky-gradient': 'var(--sky-gradient)',
+      },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'medium': 'var(--shadow-medium)',
+        'strong': 'var(--shadow-strong)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
       },
       borderRadius: {
         lg: "var(--radius)",
