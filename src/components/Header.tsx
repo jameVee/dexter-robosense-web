@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import dsLogo from "@/assets/ds-logo.svg";
 
 const Header = () => {
   return (
@@ -6,13 +7,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-hero-gradient rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">DS</span>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">DEXTER</h1>
-              <p className="text-sm text-primary font-medium -mt-1">SENSE</p>
-            </div>
+            <img src={dsLogo} alt="DEXTER SENSE Logo" className="h-12 w-auto" />
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
